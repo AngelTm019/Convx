@@ -81,181 +81,181 @@ private fun route(r: String) = SettingsAction.Route(r)
 /** The settings tree: root categories, the pages they open, and every destination under them. */
 object SettingsHubs {
     val player = SettingsHub(
-        "player", "Player & Lyrics", R.drawable.play, { systemPink },
+        "player", "Reproductor y letras", R.drawable.play, { systemPink },
         listOf(
             SettingsLinkGroup(
-                "Player",
+                "Reproductor",
                 listOf(
-                    SettingsLink("Player design", R.drawable.play, { systemPink }, SettingsAction.PlayerDesign,
-                        "Card, Vinyl, Clover, Apple Music — live previews", "theme layout background seek bar slider up next shadow volume bar"),
-                    SettingsLink("Controls & layout", R.drawable.sliders, { systemIndigo }, route("settings/appearance/advanced"),
-                        "Thumbnail, mini player, buttons and badges", "mini player comment button audio quality badge thumbnail"),
-                    SettingsLink("Player icons", R.drawable.tune, { systemOrange }, route("settings/appearance/playericons"),
-                        "Choose the playback control icons"),
+                    SettingsLink("Diseño del reproductor", R.drawable.play, { systemPink }, SettingsAction.PlayerDesign,
+                        "Tarjeta, vinilo, trébol y Apple Music: vistas previas en vivo", "theme layout background seek bar slider up next shadow volume bar"),
+                    SettingsLink("Controles y diseño", R.drawable.sliders, { systemIndigo }, route("settings/appearance/advanced"),
+                        "Portada, mini reproductor, botones e indicadores", "mini player comment button audio quality badge thumbnail"),
+                    SettingsLink("Iconos del reproductor", R.drawable.tune, { systemOrange }, route("settings/appearance/playericons"),
+                        "Elige los iconos de los controles de reproducción"),
                     SettingsLink("Canvas", R.drawable.canvas_art, { systemTeal }, route("settings/appearance/canvas"),
-                        "Animated artwork behind the player", "video animated artwork"),
+                        "Portada animada detrás del reproductor", "video animated artwork"),
                 ),
             ),
             SettingsLinkGroup(
-                "Lyrics",
+                "Letras",
                 listOf(
-                    SettingsLink("Lyrics style", R.drawable.lyrics, { systemPink }, SettingsAction.LyricsStyle,
-                        "Animation, position, scrolling and swipe — live preview", "animation karaoke word by word apple music position auto scroll swipe"),
-                    SettingsLink("Lyrics effects", R.drawable.lyrics, { systemPink }, route("settings/lyrics"),
-                        "Style, fonts, size, glow and blur", "convx lyrics font size glow blur apple music standard"),
-                    SettingsLink("Text & layout", R.drawable.lyrics, { systemOrange }, route("settings/appearance"),
-                        "Text size, spacing and full-screen lyrics", "size spacing fullscreen"),
-                    SettingsLink("Sources & priority", R.drawable.lyrics, { systemBlue }, route("settings/content/advanced"),
-                        "Choose and order lyric providers", "provider youlyplus paxsenix lrclib"),
-                    SettingsLink("Romanization", R.drawable.translate, { systemTeal }, route("settings/content/romanization"),
-                        "Show lyrics in Latin letters", "japanese korean chinese cyrillic"),
-                    SettingsLink("AI translation", R.drawable.translate, { systemPurple }, route("settings/ai"),
-                        "Provider, model and target language", "openrouter deepl api key"),
+                    SettingsLink("Estilo de letras", R.drawable.lyrics, { systemPink }, SettingsAction.LyricsStyle,
+                        "Animación, posición, desplazamiento y gestos: vista previa en vivo", "animation karaoke word by word apple music position auto scroll swipe"),
+                    SettingsLink("Efectos de letras", R.drawable.lyrics, { systemPink }, route("settings/lyrics"),
+                        "Estilo, tipografía, tamaño, brillo y desenfoque", "convx lyrics font size glow blur apple music standard"),
+                    SettingsLink("Texto y diseño", R.drawable.lyrics, { systemOrange }, route("settings/appearance"),
+                        "Tamaño del texto, espaciado y letras a pantalla completa", "size spacing fullscreen"),
+                    SettingsLink("Fuentes y prioridad", R.drawable.lyrics, { systemBlue }, route("settings/content/advanced"),
+                        "Elige y ordena los proveedores de letras", "provider youlyplus paxsenix lrclib"),
+                    SettingsLink("Romanización", R.drawable.translate, { systemTeal }, route("settings/content/romanization"),
+                        "Mostrar letras con caracteres latinos", "japanese korean chinese cyrillic"),
+                    SettingsLink("Traducción con IA", R.drawable.translate, { systemPurple }, route("settings/ai"),
+                        "Proveedor, modelo e idioma de destino", "openrouter deepl api key"),
                 ),
             ),
         ),
     )
 
     val playback = SettingsHub(
-        "playback", "Playback & Audio", R.drawable.equalizer, { systemRed },
+        "playback", "Reproducción y audio", R.drawable.equalizer, { systemRed },
         listOf(
             SettingsLinkGroup(
-                "Sound",
+                "Sonido",
                 listOf(
-                    SettingsLink("Equalizer", R.drawable.equalizer, { systemGreen }, route("settings/equalizer"), "Shape the sound", "eq bass treble"),
-                    SettingsLink("Quality & sound", R.drawable.tune, { systemBlue }, route("settings/player"),
-                        "Audio quality, normalization and skip silence", "quality normalization loudness silence"),
-                    SettingsLink("Song transitions", R.drawable.shuffle, { systemPurple }, route("settings/song_transitions"),
-                        "Crossfade, gapless and Automix", "crossfade gapless automix dj mixing"),
+                    SettingsLink("Ecualizador", R.drawable.equalizer, { systemGreen }, route("settings/equalizer"), "Personaliza el sonido", "eq bass treble"),
+                    SettingsLink("Calidad y sonido", R.drawable.tune, { systemBlue }, route("settings/player"),
+                        "Calidad de audio, normalización y omisión de silencios", "quality normalization loudness silence"),
+                    SettingsLink("Transiciones entre canciones", R.drawable.shuffle, { systemPurple }, route("settings/song_transitions"),
+                        "Fundido cruzado, reproducción sin pausas y mezcla automática", "crossfade gapless automix dj mixing"),
                 ),
             ),
             SettingsLinkGroup(
-                "Queue & behaviour",
+                "Cola y comportamiento",
                 listOf(
-                    SettingsLink("Queue & autoplay", R.drawable.queue_music, { systemOrange }, route("settings/player"),
-                        "Persistent queue, similar songs, shuffle memory", "persistent queue autoplay similar shuffle repeat"),
-                    SettingsLink("Bluetooth & output", R.drawable.cast, { systemIndigo }, route("settings/player"),
-                        "Resume on connect, pause when muted, Cast", "bluetooth cast chromecast mute"),
+                    SettingsLink("Cola y reproducción automática", R.drawable.queue_music, { systemOrange }, route("settings/player"),
+                        "Cola persistente, canciones similares y memoria de reproducción aleatoria", "persistent queue autoplay similar shuffle repeat"),
+                    SettingsLink("Bluetooth y salida de audio", R.drawable.cast, { systemIndigo }, route("settings/player"),
+                        "Reanudar al conectar, pausar al silenciar y transmitir", "bluetooth cast chromecast mute"),
                 ),
             ),
             SettingsLinkGroup(
-                "Advanced",
+                "Avanzado",
                 listOf(
-                    SettingsLink("Advanced playback", R.drawable.settings, { systemGray }, route("settings/player/advanced"),
-                        "Offload, bit-perfect and queue rules", "offload bit perfect duplicates history duration"),
-                    SettingsLink("JioSaavn", R.drawable.music_note, { systemTeal }, route("settings/player/jio"), "Streaming source settings"),
-                    SettingsLink("AI DJ analysis", R.drawable.equalizer, { systemPurple }, route("ai_dj_set"),
-                        "Analyze songs and build a mix", "bpm key mix analysis"),
+                    SettingsLink("Reproducción avanzada", R.drawable.settings, { systemGray }, route("settings/player/advanced"),
+                        "Procesamiento externo, audio bit-perfect y reglas de la cola", "offload bit perfect duplicates history duration"),
+                    SettingsLink("JioSaavn", R.drawable.music_note, { systemTeal }, route("settings/player/jio"), "Ajustes de la fuente de streaming"),
+                    SettingsLink("Análisis de DJ con IA", R.drawable.equalizer, { systemPurple }, route("ai_dj_set"),
+                        "Analiza canciones y crea una mezcla", "bpm key mix analysis"),
                 ),
             ),
         ),
     )
 
     val appearance = SettingsHub(
-        "appearance", "Appearance", R.drawable.palette, { systemPurple },
+        "appearance", "Apariencia", R.drawable.palette, { systemPurple },
         listOf(
             SettingsLinkGroup(
-                "Theme & colors",
+                "Tema y colores",
                 listOf(
-                    SettingsLink("Theme", R.drawable.palette, { systemPurple }, route("settings/appearance/theme"), "Accent, dark mode and pure black", "dark light accent color"),
-                    SettingsLink("Presets", R.drawable.palette, { systemPink }, route("settings/appearance/presets"), "Ready-made looks"),
-                    SettingsLink("Make your own", R.drawable.edit, { systemOrange }, route("settings/appearance/diy"), "Design a theme from scratch", "diy"),
-                    SettingsLink("Liquid Glass", R.drawable.palette, { systemCyan }, route("settings/appearance/liquidglass"), "Blur, tint, highlights and lens", "glass blur"),
+                    SettingsLink("Tema", R.drawable.palette, { systemPurple }, route("settings/appearance/theme"), "Color de énfasis, modo oscuro y negro puro", "dark light accent color"),
+                    SettingsLink("Preajustes", R.drawable.palette, { systemPink }, route("settings/appearance/presets"), "Apariencias prediseñadas"),
+                    SettingsLink("Crea tu propio diseño", R.drawable.edit, { systemOrange }, route("settings/appearance/diy"), "Diseña un tema desde cero", "diy"),
+                    SettingsLink("Cristal líquido", R.drawable.palette, { systemCyan }, route("settings/appearance/liquidglass"), "Desenfoque, tinte, reflejos y lente", "glass blur"),
                 ),
             ),
             SettingsLinkGroup(
-                "App",
+                "Aplicación",
                 listOf(
-                    SettingsLink("Font", R.drawable.alphabet_cyrillic, { systemGray }, route("settings/appearance/font"), "App typeface"),
-                    SettingsLink("App icon", R.drawable.convx_logo, { systemBlue }, route("settings/appearance/appicon"), "Home screen icon"),
-                    SettingsLink("Layout & home", R.drawable.sliders, { systemGreen }, route("settings/appearance"),
-                        "Language, default tab, density, home", "language default tab density refresh rate"),
-                    SettingsLink("Home feed order", R.drawable.sliders, { systemOrange }, route("settings/home_feed_order"), "Arrange home sections"),
+                    SettingsLink("Tipografía", R.drawable.alphabet_cyrillic, { systemGray }, route("settings/appearance/font"), "Tipo de letra de la aplicación"),
+                    SettingsLink("Icono de la aplicación", R.drawable.convx_logo, { systemBlue }, route("settings/appearance/appicon"), "Icono de la pantalla de inicio"),
+                    SettingsLink("Diseño e inicio", R.drawable.sliders, { systemGreen }, route("settings/appearance"),
+                        "Idioma, pestaña predeterminada, densidad e inicio", "language default tab density refresh rate"),
+                    SettingsLink("Orden del contenido de Inicio", R.drawable.sliders, { systemOrange }, route("settings/home_feed_order"), "Organiza las secciones de Inicio"),
                 ),
             ),
             SettingsLinkGroup(
-                "Advanced",
+                "Avanzado",
                 listOf(
-                    SettingsLink("Advanced appearance", R.drawable.settings, { systemGray }, route("settings/appearance/advanced"),
-                        "Grids, corners, blur and overscroll", "grid corner radius blur overscroll pure black"),
+                    SettingsLink("Apariencia avanzada", R.drawable.settings, { systemGray }, route("settings/appearance/advanced"),
+                        "Cuadrículas, esquinas, desenfoque y desplazamiento excesivo", "grid corner radius blur overscroll pure black"),
                 ),
             ),
         ),
     )
 
     val library = SettingsHub(
-        "library", "Library & Content", R.drawable.music_note, { systemOrange },
+        "library", "Biblioteca y contenido", R.drawable.music_note, { systemOrange },
         listOf(
             SettingsLinkGroup(
-                "Content",
+                "Contenido",
                 listOf(
-                    SettingsLink("Region & filters", R.drawable.language, { systemBlue }, route("settings/content"),
-                        "Language, country, explicit, Shorts, data saver", "language country explicit shorts data saver video"),
-                    SettingsLink("Artist pages & home", R.drawable.music_note, { systemPink }, route("settings/content/advanced"),
-                        "Artist videos, quick picks, chart length", "artist background video quick picks"),
+                    SettingsLink("Región y filtros", R.drawable.language, { systemBlue }, route("settings/content"),
+                        "Idioma, país, contenido explícito, Shorts y ahorro de datos", "language country explicit shorts data saver video"),
+                    SettingsLink("Páginas de artistas e Inicio", R.drawable.music_note, { systemPink }, route("settings/content/advanced"),
+                        "Videos de artistas, selecciones rápidas y duración de listas", "artist background video quick picks"),
                 ),
             ),
             SettingsLinkGroup(
-                "Local music",
+                "Música local",
                 listOf(
-                    SettingsLink("Music folders", R.drawable.music_note, { systemOrange }, route("settings/player/local_folders"), "Choose folders to scan", "local files"),
-                    SettingsLink("Scan local files", R.drawable.search, { systemGreen }, route("settings/scan_music"), "Find songs on this device"),
-                    SettingsLink("Network storage", R.drawable.storage, { systemGray }, route("settings/network_storage"), "SMB and WebDAV shares", "smb webdav nas"),
+                    SettingsLink("Carpetas de música", R.drawable.music_note, { systemOrange }, route("settings/player/local_folders"), "Elige las carpetas que se analizarán", "local files"),
+                    SettingsLink("Buscar archivos locales", R.drawable.search, { systemGreen }, route("settings/scan_music"), "Busca canciones en este dispositivo"),
+                    SettingsLink("Almacenamiento en red", R.drawable.storage, { systemGray }, route("settings/network_storage"), "Recursos compartidos SMB y WebDAV", "smb webdav nas"),
                 ),
             ),
             SettingsLinkGroup(
                 null,
-                listOf(SettingsLink("Modules", R.drawable.link, { systemBlue }, route("settings/modules"), "Music sources and add-ons", "plugins extensions")),
+                listOf(SettingsLink("Módulos", R.drawable.link, { systemBlue }, route("settings/modules"), "Fuentes de música y complementos", "plugins extensions")),
             ),
         ),
     )
 
     val accounts = SettingsHub(
-        "accounts", "Accounts & Services", R.drawable.account, { systemGreen },
+        "accounts", "Cuentas y servicios", R.drawable.account, { systemGreen },
         listOf(
             SettingsLinkGroup(
-                "Accounts",
+                "Cuentas",
                 listOf(
-                    SettingsLink("YouTube Music", R.drawable.account, { systemRed }, route("settings/account"), "Sign-in, sync and ListenBrainz", "login youtube sync listenbrainz"),
-                    SettingsLink("Spotify", R.drawable.spotify, { systemGreen }, route("settings/spotify"), "Connect and import playlists", "import"),
-                    SettingsLink("Apple Music import", R.drawable.playlist_add, { systemRed }, SettingsAction.AppleMusicImport, "Import playlists from a link or export", "apple music playlist import export"),
-                    SettingsLink("Discord", R.drawable.discord, { systemIndigo }, route("settings/integrations/discord"), "Listening status", "rich presence"),
-                    SettingsLink("Last.fm", R.drawable.music_note, { systemRed }, route("settings/integrations/lastfm"), "Scrobbling", "scrobble"),
+                    SettingsLink("YouTube Music", R.drawable.account, { systemRed }, route("settings/account"), "Inicio de sesión, sincronización y ListenBrainz", "login youtube sync listenbrainz"),
+                    SettingsLink("Spotify", R.drawable.spotify, { systemGreen }, route("settings/spotify"), "Conecta e importa listas de reproducción", "import"),
+                    SettingsLink("Importar desde Apple Music", R.drawable.playlist_add, { systemRed }, SettingsAction.AppleMusicImport, "Importa listas desde un enlace o una exportación", "apple music playlist import export"),
+                    SettingsLink("Discord", R.drawable.discord, { systemIndigo }, route("settings/integrations/discord"), "Estado de reproducción", "rich presence"),
+                    SettingsLink("Last.fm", R.drawable.music_note, { systemRed }, route("settings/integrations/lastfm"), "Registro de reproducciones", "scrobble"),
                 ),
             ),
             SettingsLinkGroup(
-                "Services",
+                "Servicios",
                 listOf(
-                    SettingsLink("Network & proxy", R.drawable.wifi_proxy, { systemGray }, route("settings/network"), "IP version and proxy", "proxy ipv6 ipv4 network"),
+                    SettingsLink("Red y proxy", R.drawable.wifi_proxy, { systemGray }, route("settings/network"), "Versión IP y proxy", "proxy ipv6 ipv4 network"),
                 ),
             ),
         ),
     )
 
     val privacy = SettingsHub(
-        "privacy", "Privacy & Storage", R.drawable.security, { systemBlue },
+        "privacy", "Privacidad y almacenamiento", R.drawable.security, { systemBlue },
         listOf(
             SettingsLinkGroup(
                 null,
                 listOf(
-                    SettingsLink("Privacy", R.drawable.security, { systemBlue }, route("settings/privacy"), "History and screenshots", "pause history clear history screenshot"),
-                    SettingsLink("Storage", R.drawable.storage, { systemGray }, route("settings/storage"), "Downloads and caches", "cache downloads clear"),
-                    SettingsLink("Backup & restore", R.drawable.restore, { systemGreen }, route("settings/backup_restore"), "Save or restore your library", "backup import export"),
+                    SettingsLink("Privacidad", R.drawable.security, { systemBlue }, route("settings/privacy"), "Historial y capturas de pantalla", "pause history clear history screenshot"),
+                    SettingsLink("Almacenamiento", R.drawable.storage, { systemGray }, route("settings/storage"), "Descargas y cachés", "cache downloads clear"),
+                    SettingsLink("Copia de seguridad y restauración", R.drawable.restore, { systemGreen }, route("settings/backup_restore"), "Guarda o restaura tu biblioteca", "backup import export"),
                 ),
             ),
         ),
     )
 
     val help = SettingsHub(
-        "help", "Help & About", R.drawable.info, { systemGray },
+        "help", "Ayuda e información", R.drawable.info, { systemGray },
         listOf(
             SettingsLinkGroup(
                 null,
                 listOf(
-                    SettingsLink("Crash report", R.drawable.bug_report, { systemRed }, route("settings/help/crash_logs"), "View or share the latest crash"),
-                    SettingsLink("Playback logs", R.drawable.bug_report, { systemOrange }, route("settings/content/advanced"), "Troubleshoot playback", "logs client probe"),
-                    SettingsLink("Changelog", R.drawable.network_update, { systemBlue }, route("settings/changelog"), "What's new"),
-                    SettingsLink("About", R.drawable.info, { systemGray }, route("settings/about"), "Version, licenses and project"),
+                    SettingsLink("Informe de fallos", R.drawable.bug_report, { systemRed }, route("settings/help/crash_logs"), "Consulta o comparte el último informe de fallos"),
+                    SettingsLink("Registros de reproducción", R.drawable.bug_report, { systemOrange }, route("settings/content/advanced"), "Soluciona problemas de reproducción", "logs client probe"),
+                    SettingsLink("Registro de cambios", R.drawable.network_update, { systemBlue }, route("settings/changelog"), "Novedades"),
+                    SettingsLink("Acerca de", R.drawable.info, { systemGray }, route("settings/about"), "Versión, licencias y proyecto"),
                 ),
             ),
         ),
@@ -285,13 +285,13 @@ fun rememberSettingsActionHandler(navController: NavController): (SettingsAction
 fun SettingsSheetHost(navController: NavController) {
     val close = { SettingsSheets.open = null }
     when (SettingsSheets.open) {
-        SettingsAction.PlayerDesign -> IosPageSheet("Player design", close) {
+        SettingsAction.PlayerDesign -> IosPageSheet("Diseño del reproductor", close) {
             PlayerDesignSheetContent(onMoreOptions = {
                 close()
                 navController.navigate("settings/appearance/playertheme")
             })
         }
-        SettingsAction.LyricsStyle -> IosPageSheet("Lyrics style", close) { LyricsAnimationSheetContent() }
+        SettingsAction.LyricsStyle -> IosPageSheet("Estilo de letras", close) { LyricsAnimationSheetContent() }
         SettingsAction.AppleMusicImport -> AppleMusicImportDialogHost(
             navController = navController,
             onCloseSheet = { SettingsSheets.open = null },
