@@ -87,7 +87,7 @@ fun RomanizationSettings(
         horizontalPadding = 16.dp,
     ) {
         IosSettingsGroup(
-            title = "Romanization",
+            title = "Romanización",
             items = listOf(
                 IosSettingsItem(
                     icon = painterResource(R.drawable.lyrics),
