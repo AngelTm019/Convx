@@ -46,7 +46,7 @@ fun IntegrationScreen(
         horizontalPadding = 16.dp,
     ) {
         IntegrationCard(
-            title = "Services",
+            title = "Servicios",
             items = listOf(
                 IntegrationCardItem(
                     icon = painterResource(R.drawable.discord),
