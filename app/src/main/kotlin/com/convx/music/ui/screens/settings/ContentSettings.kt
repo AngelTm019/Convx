@@ -171,7 +171,7 @@ fun ContentSettings(
         horizontalPadding = 16.dp,
     ) {
         IosSettingsGroup(
-            title = "Region & language",
+            title = "Región e idioma",
             items = listOf(
                 IosSettingsItem(
                     icon = rememberVectorPainter(SfSymbols.Monochrome.SFGlobe),
@@ -195,7 +195,7 @@ fun ContentSettings(
                 ),
                 IosSettingsItem(
                     icon = rememberVectorPainter(SfSymbols.Monochrome.SFGlobeAsiaAustraliaFill),
-                    title = { Text("Suggestions Region") },
+                    title = { Text("Región de sugerencias") },
                     description = {
                         Text(
                             SuggestionRegionSlugToName.getOrElse(suggestionRegion) { "Global Charts" }
@@ -209,7 +209,7 @@ fun ContentSettings(
         Spacer(modifier = Modifier.height(27.dp))
 
         IosSettingsGroup(
-            title = "Filters & data",
+            title = "Filtros y datos",
             items = listOf(
                 IosSettingsItem(
                     icon = painterResource(R.drawable.explicit),
@@ -263,7 +263,7 @@ fun ContentSettings(
         Spacer(modifier = Modifier.height(27.dp))
 
         IosSettingsGroup(
-            title = "Home feed",
+            title = "Contenido de Inicio",
             items = listOf(
                 IosSettingsItem(
                     icon = rememberVectorPainter(SfSymbols.Monochrome.SFShuffle),
