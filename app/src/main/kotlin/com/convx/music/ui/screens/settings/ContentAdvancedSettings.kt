@@ -596,7 +596,7 @@ fun ContentAdvancedSettings(
         if (networkOnly) Spacer(modifier = Modifier.height(27.dp))
 
         if (!networkOnly) IosSettingsGroup(
-            title = "Lyrics sources",
+            title = "Fuentes de letras",
             items = listOf(
                 IosSettingsItem(
                     icon = painterResource(R.drawable.lyrics),
@@ -615,7 +615,7 @@ fun ContentAdvancedSettings(
         if (!networkOnly) Spacer(modifier = Modifier.height(27.dp))
 
         if (!networkOnly) IosSettingsGroup(
-            title = "Home & discovery",
+            title = "Inicio y descubrimiento",
             items = listOf(
                 IosSettingsItem(
                     icon = painterResource(R.drawable.trending_up),
