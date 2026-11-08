@@ -604,12 +604,12 @@ fun GlassEffectSettings(
         ) {
             Column {
             IosSettingsGroup(
-                title = "More controls",
+                title = "Más controles",
                 items = listOf(
                     IosSettingsItem(
                         icon = painterResource(R.drawable.tune),
-                        title = { Text("Advanced glass settings") },
-                        description = { Text("Style, color, highlights and per-component effects") },
+                        title = { Text("Ajustes avanzados del efecto de cristal") },
+                        description = { Text("Estilo, color, reflejos y efectos por componente") },
                         onClick = { navController.navigate("settings/appearance/liquidglass/advanced") },
                     ),
                 ),
