@@ -150,7 +150,7 @@ fun PlayerSettings(
         item(key = "player_settings_content") {
             Column {
                 IosSettingsGroup(
-                    title = "Sound",
+                    title = "Sonido",
                     items = buildList {
                         add(IosSettingsItem(
                             icon = painterResource(R.drawable.graphic_eq),
@@ -201,7 +201,7 @@ fun PlayerSettings(
                 Spacer(modifier = Modifier.height(27.dp))
 
                 IosSettingsGroup(
-                    title = "Transitions & output",
+                    title = "Transiciones y salida",
                     items = buildList {
                         add(IosSettingsItem(
                             icon = painterResource(R.drawable.ic_queue_crossfade),
@@ -240,7 +240,7 @@ fun PlayerSettings(
                 Spacer(modifier = Modifier.height(27.dp))
 
                 IosSettingsGroup(
-                    title = "Queue & autoplay",
+                    title = "Cola y reproducción automática",
                     items = listOf(
                         IosSettingsItem(
                             icon = painterResource(R.drawable.queue_music),
@@ -308,7 +308,7 @@ fun PlayerSettings(
                 Spacer(modifier = Modifier.height(27.dp))
 
                 IosSettingsGroup(
-                    title = "Downloads",
+                    title = "Descargas",
                     items = listOf(
                         IosSettingsItem(
                             icon = painterResource(R.drawable.download),
@@ -340,7 +340,7 @@ fun PlayerSettings(
                 Spacer(modifier = Modifier.height(27.dp))
 
                 IosSettingsGroup(
-                    title = "Local music",
+                    title = "Música local",
                     items = buildList {
                         add(IosSettingsItem(
                             icon = painterResource(R.drawable.music_note),
@@ -354,7 +354,7 @@ fun PlayerSettings(
                 Spacer(modifier = Modifier.height(27.dp))
 
                 IosSettingsGroup(
-                    title = "Behaviour",
+                    title = "Comportamiento",
                     items = listOf(
                         IosSettingsItem(
                             icon = painterResource(R.drawable.volume_off_pause),
