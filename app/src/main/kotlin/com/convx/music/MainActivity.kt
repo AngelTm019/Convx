@@ -52,7 +52,6 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     companion object {
-        const val EXTRA_PLAY_INTRO = "com.convx.music.extra.PLAY_INTRO"
         internal const val ACTION_SEARCH = "com.convx.music.action.SEARCH"
         internal const val ACTION_LIBRARY = "com.convx.music.action.LIBRARY"
     }
@@ -179,23 +178,18 @@ class MainActivity : ComponentActivity() {
                 }
         }
 
-        // Cold launch from the launcher only (WelcomeActivity hands off with this extra);
-        // notification/deep-link opens go straight to the app.
-        val playIntro = savedInstanceState == null && intent.getBooleanExtra(EXTRA_PLAY_INTRO, false)
+        // La introducción animada anterior se retiró para dejar el inicio libre
+        // y permitir incorporar posteriormente el video de bienvenida propio de Convx.
         setContent {
-            var showIntro by rememberSaveable { mutableStateOf(playIntro) }
-            Box(Modifier.fillMaxSize()) {
-                AppRootContent(
-                    activity = this@MainActivity,
-                    intentRouter = deepLinkRouter,
-                    playerConnection = playerConnection,
-                    database = database,
-                    downloadUtil = downloadUtil,
-                    syncUtils = syncUtils,
-                    historyDataSource = historyDataSource,
-                )
-                if (showIntro) com.convx.music.ui.component.ConvxIntro(onFinished = { showIntro = false })
-            }
+            AppRootContent(
+                activity = this@MainActivity,
+                intentRouter = deepLinkRouter,
+                playerConnection = playerConnection,
+                database = database,
+                downloadUtil = downloadUtil,
+                syncUtils = syncUtils,
+                historyDataSource = historyDataSource,
+            )
         }
     }
 
