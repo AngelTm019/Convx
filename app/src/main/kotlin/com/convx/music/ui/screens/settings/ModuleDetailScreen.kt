@@ -326,7 +326,7 @@ fun ModuleDetailScreen(
                     onDismissRequest = { tidalQualityExpanded = false },
                 ) {
                     DropdownMenuItem(
-                        text = { Text("Default") },
+                        text = { Text("Predeterminado") },
                         onClick = {
                             updateModuleSetting("tidalQuality", "")
                             tidalQualityExpanded = false
