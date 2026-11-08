@@ -65,11 +65,11 @@ fun LyricsSettingsScreen(navController: NavController) {
             ),
         ))
         LyricsFontSettings()
-        IosSettingsGroup(title = "Lyrics sources", items = listOf(
+        IosSettingsGroup(title = "Fuentes de letras", items = listOf(
             IosSettingsItem(
                 icon = painterResource(R.drawable.lyrics),
-                title = { Text("Provider order and availability") },
-                description = { Text("Drag to reorder sources and enable or disable each provider") },
+                title = { Text("Orden y disponibilidad de proveedores") },
+                description = { Text("Arrastra para reordenar las fuentes y activar o desactivar cada proveedor") },
                 onClick = { navController.navigate("settings/content/advanced") },
             ),
         ))
@@ -79,13 +79,13 @@ fun LyricsSettingsScreen(navController: NavController) {
                 paxKey = it
                 credentials.edit().putString("paxsenix_api_key", it.trim()).apply()
             },
-            label = { Text("PaxSenix API key") },
-            supportingText = { Text("Used by PaxSenix Spotify and Musixmatch sources") },
+            label = { Text("Clave API de PaxSenix") },
+            supportingText = { Text("La utilizan las fuentes de PaxSenix, Spotify y Musixmatch") },
             singleLine = true,
             visualTransformation = androidx.compose.ui.text.input.PasswordVisualTransformation(),
         )
         IosSettingsGroup(
-            title = "Lyrics effects",
+            title = "Efectos de las letras",
             items = listOf(
                 IosSettingsItem(
                     icon = painterResource(R.drawable.lyrics),
