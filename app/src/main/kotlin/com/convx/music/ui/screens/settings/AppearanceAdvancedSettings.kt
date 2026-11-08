@@ -441,7 +441,7 @@ fun AppearanceAdvancedSettings(
                 Spacer(modifier = Modifier.height(27.dp))
 
                 IosSettingsGroup(
-                    title = "Layout & behaviour",
+                    title = "Diseño y comportamiento",
                     items = listOf(
                         IosSettingsItem(
                             icon = painterResource(R.drawable.tune),
@@ -479,7 +479,7 @@ fun AppearanceAdvancedSettings(
                 Spacer(modifier = Modifier.height(27.dp))
 
                 IosSettingsGroup(
-                    title = "Navigation tabs",
+                    title = "Pestañas de navegación",
                     items = optionalTabs.map { tab ->
                         val visible = tab.route !in hiddenTabs
                         IosSettingsItem(
@@ -496,7 +496,7 @@ fun AppearanceAdvancedSettings(
                 Spacer(modifier = Modifier.height(27.dp))
 
                 IosSettingsGroup(
-                    title = "Player",
+                    title = "Reproductor",
                     items = listOf(
                         IosSettingsItem(
                             icon = painterResource(R.drawable.hide_image),
@@ -582,7 +582,7 @@ fun AppearanceAdvancedSettings(
                 Spacer(modifier = Modifier.height(27.dp))
 
                 IosSettingsGroup(
-                    title = "Lyrics effects",
+                    title = "Efectos de las letras",
                     items = listOf(
                         IosSettingsItem(
                             icon = painterResource(R.drawable.play),
@@ -614,7 +614,7 @@ fun AppearanceAdvancedSettings(
                 Spacer(modifier = Modifier.height(27.dp))
 
                 IosSettingsGroup(
-                    title = "Other",
+                    title = "Otros",
                     items = listOf(
                         IosSettingsItem(
                             icon = painterResource(R.drawable.tab),
