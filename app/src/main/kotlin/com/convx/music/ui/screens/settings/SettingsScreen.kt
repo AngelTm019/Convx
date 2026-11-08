@@ -259,7 +259,7 @@ private fun SearchResults(entries: List<SearchEntry>, query: String, onAction: (
     }
     // Results keep their category so "Background" under Player reads differently from a home background.
     SettingsLinkCard(
-        title = "${hits.size} result${if (hits.size == 1) "" else "s"}",
+        title = "${hits.size} resultado${if (hits.size == 1) "" else "s"}",
         links = hits.map { it.link.copy(subtitle = it.category + (it.link.subtitle?.let { s -> " · $s" } ?: "")) },
         onAction = onAction,
     )
