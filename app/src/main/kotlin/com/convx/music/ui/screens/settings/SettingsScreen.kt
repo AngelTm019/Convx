@@ -317,14 +317,14 @@ private fun ProfileCard(accountName: String, accountImageUrl: String?, onClick: 
         )
         Column(Modifier.weight(1f).padding(start = 16.dp)) {
             Text(
-                if (signedIn) accountName else "Sign in",
+                if (signedIn) accountName else "Iniciar sesión",
                 style = IosTheme.typography.title3,
                 fontWeight = FontWeight.SemiBold,
                 color = IosTheme.colors.label,
                 maxLines = 1,
             )
             Text(
-                if (signedIn) "YouTube Music, sync and more" else "YouTube Music, Spotify and more",
+                if (signedIn) "YouTube Music, sincronización y más" else "YouTube Music, Spotify y más",
                 style = IosTheme.typography.footnote,
                 color = IosTheme.colors.secondaryLabel,
                 maxLines = 1,
