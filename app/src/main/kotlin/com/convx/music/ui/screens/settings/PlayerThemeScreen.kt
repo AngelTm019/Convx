@@ -250,7 +250,7 @@ fun PlayerThemeScreen(
             onClick = { SettingsSheets.open = SettingsAction.PlayerDesign },
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Text("Change", color = AppTheme.colorScheme.primary, style = AppTheme.typography.labelLarge)
+                Text("Cambiar", color = AppTheme.colorScheme.primary, style = AppTheme.typography.labelLarge)
                 Spacer(Modifier.width(6.dp))
                 SymbolIcon(symbol = sf("chevron.right"), contentDescription = null, size = 13.dp, tint = AppTheme.colorScheme.primary)
             }
