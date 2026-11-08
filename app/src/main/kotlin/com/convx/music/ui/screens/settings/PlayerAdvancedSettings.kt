@@ -151,7 +151,7 @@ fun PlayerAdvancedSettings(
         item(key = "player_advanced_settings_content") {
             Column {
                 IosSettingsGroup(
-                    title = "Audio engine",
+                    title = "Motor de audio",
                     items = buildList {
                         add(IosSettingsItem(
                             icon = painterResource(R.drawable.graphic_eq),
@@ -292,7 +292,7 @@ fun PlayerAdvancedSettings(
                 Spacer(modifier = Modifier.height(27.dp))
 
                 IosSettingsGroup(
-                    title = "Queue rules",
+                    title = "Reglas de la cola",
                     items = listOf(
                         IosSettingsItem(
                             icon = painterResource(R.drawable.playlist_add),
@@ -357,7 +357,7 @@ fun PlayerAdvancedSettings(
                 Spacer(modifier = Modifier.height(27.dp))
 
                 IosSettingsGroup(
-                    title = "Other",
+                    title = "Otros",
                     items = listOf(
                         IosSettingsItem(
                             icon = painterResource(R.drawable.clear_all),
