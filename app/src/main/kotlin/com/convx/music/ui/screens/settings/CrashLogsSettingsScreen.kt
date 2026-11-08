@@ -50,7 +50,7 @@ fun CrashLogsSettingsScreen(navController: NavController) {
 
     SettingsPage(
         navController = navController,
-        title = "Crash report",
+        title = "Informe de fallos",
         horizontalPadding = 16.dp,
     ) {
         Text(
@@ -73,23 +73,23 @@ fun CrashLogsSettingsScreen(navController: NavController) {
                 items = listOf(
                     IosSettingsItem(
                         icon = painterResource(R.drawable.info),
-                        title = { Text("No crash report yet") },
-                        description = { Text("A report will be saved here if the app closes unexpectedly.") },
+                        title = { Text("Todavía no hay informes de fallos") },
+                        description = { Text("Aquí se guardará un informe si la aplicación se cierra inesperadamente.") },
                     ),
                 ),
             )
         } else {
             IosSettingsGroup(
-                title = "Latest report",
+                title = "Informe más reciente",
                 items = listOf(
                     IosSettingsItem(
                         icon = painterResource(R.drawable.content_copy),
-                        title = { Text("Copy report") },
+                        title = { Text("Copiar informe") },
                         onClick = { copyReport(context, report) },
                     ),
                     IosSettingsItem(
                         icon = painterResource(R.drawable.share),
-                        title = { Text("Share report") },
+                        title = { Text("Compartir informe") },
                         onClick = { shareReport(context, report) },
                     ),
                 ),
