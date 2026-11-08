@@ -190,7 +190,7 @@ fun PrivacySettings(
         Spacer(modifier = Modifier.height(27.dp))
 
         IosSettingsGroup(
-            title = "Screen security",
+            title = "Seguridad de pantalla",
             items = listOf(
                 IosSettingsItem(
                     icon = painterResource(R.drawable.screenshot),
