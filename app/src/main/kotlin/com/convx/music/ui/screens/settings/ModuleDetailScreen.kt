@@ -275,7 +275,7 @@ fun ModuleDetailScreen(
                     onDismissRequest = { qualityExpanded = false },
                 ) {
                     DropdownMenuItem(
-                        text = { Text("Default") },
+                        text = { Text("Predeterminado") },
                         onClick = {
                             updateModuleSetting("quality", "")
                             qualityExpanded = false
