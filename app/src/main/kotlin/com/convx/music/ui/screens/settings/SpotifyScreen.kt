@@ -492,13 +492,13 @@ private fun SpotifyLoginSheet(
                 color = AppTheme.colorScheme.onSurfaceVariant,
             )
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                TextButton(onClick = { if (webView?.canGoBack() == true) webView?.goBack() else onDismiss() }) { Text("Back") }
-                TextButton(onClick = onDismiss) { Text("Close") }
+                TextButton(onClick = { if (webView?.canGoBack() == true) webView?.goBack() else onDismiss() }) { Text("Atrás") }
+                TextButton(onClick = onDismiss) { Text("Cerrar") }
             }
             if (loading) LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
             pageError?.let { message ->
                 Text(message, color = AppTheme.colorScheme.error)
-                TextButton(onClick = { pageError = null; webView?.reload() }) { Text("Retry") }
+                TextButton(onClick = { pageError = null; webView?.reload() }) { Text("Reintentar") }
             }
             AndroidView(
                 modifier = Modifier
