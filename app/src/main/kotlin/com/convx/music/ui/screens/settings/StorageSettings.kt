@@ -272,7 +272,7 @@ fun StorageSettings(
         horizontalPadding = 16.dp,
     ) {
         IosSettingsGroup(
-            title = "Usage",
+            title = "Uso del almacenamiento",
             items = listOf(
                 IosSettingsItem(
                     icon = painterResource(R.drawable.storage),
